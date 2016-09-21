@@ -9,12 +9,6 @@ div {
     width: 100%;
    height: 100vh;
     background-color: #006947;
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 7s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; 
-    animation-name: example;
-    animation-interation-count: infinite;
-    animation-duration: 7s;
 }
 p {
     color: #D4F0FF;
@@ -26,26 +20,25 @@ p {
     transform: translateX(-50%) translateY(-50%);
 }
 /* Chrome, Safari, Opera */
-@-webkit-keyframes example {
-    0%   {background-color: #006947;}
-    25%  {background-color: #197859;}
-    50%  {background-color: #32876b;}
-    75% {background-color: #197859;}
-    100% {background-color: #006947;}    
+
+#shadow {
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
 }
 
 /* Standard syntax */
-@keyframes example {
-    0%   {background-color: #006947;}
-    25%  {background-color: #197859;}
-    50%  {background-color: #32876b;}
-    75% {background-color: #197859;}
-    100% {background-color: #006947;} 
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
 }
 </style>
 </head>
 <body>
-<div><p> <script language="JavaScript">
+<div><p ID="shadow"> <script language="JavaScript">
        <!-- 
        var r_text = new Array ();
        r_text[0] = "I've been sleepless at night, <br> cause I don't know how I feel.";
