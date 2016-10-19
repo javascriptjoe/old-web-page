@@ -5,7 +5,9 @@
   text-align: center;
   border: 3px solid grey;
 }
-
+.dude:hover {
+ color: #ff533d; 
+}
 body {
  background-color: #0c1347; 
 }
